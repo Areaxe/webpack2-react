@@ -1,0 +1,31 @@
+body{
+	background-color: #f0f0f0;
+}
+.home{
+	button{
+		line-height: 42px;
+		border-radius: 4px;
+		font-size:14px;
+		width: auto;
+		border:none;
+		outline: none;
+		background-color: #222244;
+		color: #fff;
+	}
+	a{
+		margin-left: 20px;
+		width: 120px;
+		line-height: 42px;
+		color: #fff;
+		background-color: #aaa;
+		display: inline-block;
+		text-align: center;
+		text-decoration: none;
+		color: #222244;
+		font-size: 14px;
+		transition: all .4s ease-in-out;
+		&:hover{
+			background: lightblue;
+		}
+	}
+}
