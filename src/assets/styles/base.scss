@@ -1,0 +1,13 @@
+@import './theme.scss';
+.error-text{
+	color: $error;
+}
+body{
+	font-size: 16px;
+	width: 100%;
+	height: 100%;
+}
+*{
+	padding: 0;
+	margin:0;
+}

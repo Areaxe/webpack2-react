@@ -11,10 +11,10 @@ module.exports = {
   },
   devServer:{
     contentBase: './src/www',  //Relative directory for base of server
-    // hot: true,        //Live-reload  
-    // inline: true,
+    hot: true,        //Live-reload  
+    inline: true,
     port: 3000,        //Port Number
-    host: '0.0.0.0'    //'localhost'  //Change to '0.0.0.0' for external facing server
+    host: 'localhost'    //'localhost'  //Change to '0.0.0.0' for external facing server
   },
   output: {
     filename: 'bundle.js',
@@ -22,11 +22,12 @@ module.exports = {
     publicPath:'/'
   },
   resolve: {
-    extensions: [".jsx", ".js"],
+    extensions: [".jsx", ".js","scss","css"],
     alias: {
       components: path.join(__dirname, 'src/components'),
       pages:path.join(__dirname, 'src/pages'),
-      utils:path.join(__dirname, 'src/utils')
+      utils:path.join(__dirname, 'src/utils'),
+      Assets:path.join(__dirname,'src/assets')
     }
   },
   module: {
@@ -82,6 +83,9 @@ module.exports = {
     plugins: [
       new TransferWebpackPlugin([{from: 'www'}], path.resolve(__dirname, "src")),
       new ExtractTextPlugin("styles.css"),
-      new webpack.HotModuleReplacementPlugin()
+      new webpack.HotModuleReplacementPlugin(),
+      new webpack.DefinePlugin({
+        'process.env.NODE_ENV': JSON.stringify('development')
+    })
     ],
 };

@@ -26,7 +26,7 @@ import { Router, Route, IndexRoute, browserHistory,hashHistory } from 'react-rou
 import Home from './pages/Index/index';
 import List from './pages/List/list.jsx';
 import Template from './pages/Template.jsx';
-import './styles/base.scss';
+import './assets/styles/base.scss';
 
 ReactDOM.render((
   <Router history={browserHistory}>

@@ -11,10 +11,25 @@ export default class Index extends Component{
 	}
 
 	render(){
-		return <div className="home">
-		  <Button name="primary" onClick={this.showProps.bind(this)}>click to show props</Button>
-			<Link to={'/list'}>to List</Link>
-			<p className="error-text">我是全局样式</p>
+		let accounts = [
+			
+		]
+		return <div className="red-packet-page">
+		  <div className="red-packet-bg">
+		     <button className="red-packet-btn">点击领取</button>
+			 <div ref="listContainer">
+				 <p className="remind-text">以下小伙伴领取了红包：</p>
+				 <ul>
+					 {
+						 ()=>{
+							 let container = this.refs.listContainer
+							 console.log(container)
+							 return <div>-------------</div>
+						 }
+					 }
+				 </ul>
+			 </div>
+		  </div>
 		</div>
 	}
 }
