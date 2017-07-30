@@ -12,6 +12,7 @@ export default class Directories extends Component {
     this.toggleNode = this.toggleNode.bind(this);
     this.selectedDoc = this.selectedDoc.bind(this);
   }
+
   componentDidMount(){
     let selectedDom = this.refs[this.props.selected]
     if(selectedDom){
@@ -19,11 +20,13 @@ export default class Directories extends Component {
     }
   }
 
-  toggleNode(nodeId, e) {   //展开闭合目录效果
+  toggleNode(nodeId,event) {   //展开闭合目录效果
+    console.log(event.target)
     this.setState({
-      ['ul'+nodeId]: this.state.showAll?false:!this.state['ul'+nodeId],
+      ['ul'+nodeId]: this.state.showAll?false:!this.state['ul'+nodeId], //
       showAll:false
     })
+
     let selectedUl = ReactDOM.findDOMNode(this.refs['ul'+nodeId])
     if(selectedUl)
       selectedUl.style.display = selectedUl.style.display === "none" ? "block" : "none"
@@ -45,13 +48,15 @@ export default class Directories extends Component {
               className={(isDirectiore ? 'directoire':"title")+(selectedId===item.id?' selected':'')} 
               style={{ paddingLeft: floor * 10 + 'px' }}
               onClick={()=>isDirectiore?'':this.selectedDoc(item.id)}
-           >
-              <div>{item.title}</div>
+           >{
+             
+           }
+              <div onClick={(e)=>this.toggleNode(item.id,e)}>{item.title}</div>
               {
                 isDirectiore&&item.children&&item.children.length?
                   <span
                     className={(showAll||this.state['ul'+item.id] )? "arrow arrow-down" : "arrow"}
-                    onClick={(e) => this.toggleNode(item.id)}> &rsaquo;
+                    onClick={(e) => this.toggleNode(item.id,e)}> &rsaquo;
                     </span>
                   : null
               }
@@ -74,12 +79,12 @@ export default class Directories extends Component {
     return <ul>
       <li>
         <div className="directoire big-directiore">
-          <div>{directorie.title}</div>
+          <div onClick={(e) => this.toggleNode(directorie.id,e)}>{directorie.title}</div>
           {
             directorie.children && directorie.children.length ?
               <span
                 className={showAll||this.state['ul'+directorie.id] ? "arrow arrow-down" : "arrow"}
-                onClick={(e) => this.toggleNode(directorie.id)}> &rsaquo;
+                onClick={(e) => this.toggleNode(directorie.id,e)}> &rsaquo;
             </span> : null
           }
         </div>

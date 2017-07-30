@@ -3,7 +3,7 @@ const classnames = (classname,classSet)=>{
 	let classSets = ''
 	keys.forEach((item,i)=>{
 		if(classSet[keys[i]]){
-        classSets += i?' '+keys[i]:keys[i]
+        classSets += ' '+keys[i]
       }
 	})
   return classname+classSets

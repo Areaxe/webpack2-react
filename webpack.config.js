@@ -9,6 +9,7 @@ module.exports = {
     main:'./src/main.jsx',
     // vendor:['react','react-dom']
   },
+  devtool: "cheap-eval-source-map",
   devServer:{
     contentBase: './src/www',  //Relative directory for base of server
     hot: true,        //Live-reload  
@@ -55,7 +56,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        test: /\.(woff|woff2|eot|ttf|otf|mp3)$/,
         use: [
           'file-loader'
         ]
