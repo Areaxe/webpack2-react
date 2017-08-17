@@ -1,5 +1,5 @@
 $theme-color:#03a9f4;
-$light-color:#f4f8f9;
+$light-color:#e5f4fb;
 $border-color:#e5e5e5;
 .date-picker{
   width: 300px;
@@ -24,8 +24,10 @@ $border-color:#e5e5e5;
     border:solid 1px $border-color;
     border-top:none;
     box-sizing: border-box;
+    background-color:#fff;
   }
   .select-module{
+    background-color: #fff;
     .left-arrow,.right-arrow,.selected-container{
       display: inline-block;
       vertical-align: top;
@@ -57,7 +59,7 @@ $border-color:#e5e5e5;
     margin-bottom: 10px;
     li{
       width: 14.2857%;
-      background: $theme-color;
+      background-color: $theme-color;
       color:#fff;
     }
   }
