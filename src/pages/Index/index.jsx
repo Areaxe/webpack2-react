@@ -14,7 +14,8 @@ export default class Index extends Component{
 	}
 	render(){
 		return <div className="index-page">
-			<DatePicker />	
+			<DatePicker />
+			<div className="fa-calendar"></div>	
 		</div>
 	}
 }

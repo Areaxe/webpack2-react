@@ -1,4 +1,5 @@
 @import './theme.scss';
+@import './font-awesome.css';
 .error-text{
 	color: $error;
 }
@@ -6,6 +7,7 @@ body{
 	font-size: 16px;
 	width: 100%;
 	height: 100%;
+	font-family: 'FontAwesome'!important;
 }
 *{
 	padding: 0;
