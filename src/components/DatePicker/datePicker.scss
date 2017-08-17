@@ -1,5 +1,5 @@
-$theme-color:#03a9f4;
-$light-color:#e5f4fb;
+$theme-color:#7BAF30;
+$light-color:lightgreen;
 $border-color:#e5e5e5;
 .date-picker{
   width: 300px;
@@ -11,6 +11,7 @@ $border-color:#e5e5e5;
     outline: none;
   }
   .date-show{
+    background-color:#fff;
     border:solid 1px $border-color;
     padding:0 20px;
     line-height: inherit;
@@ -22,7 +23,6 @@ $border-color:#e5e5e5;
     left: 0;
     top:42px;
     border:solid 1px $border-color;
-    border-top:none;
     box-sizing: border-box;
     background-color:#fff;
   }
@@ -47,6 +47,8 @@ $border-color:#e5e5e5;
   }
   .week-list,.date-list,.month-list,.year-list{
     width: 100%;
+    padding-bottom:10px;
+    box-shadow: 2px 2px 4px #ccc;
     li{
       box-sizing: border-box;
       display: inline-block;
@@ -56,10 +58,12 @@ $border-color:#e5e5e5;
     }
   }
   .week-list{
+    padding-bottom:0px;
+    box-shadow: 0 0 0 #fff;
     margin-bottom: 10px;
+    background-color: $theme-color;
     li{
       width: 14.2857%;
-      background-color: $theme-color;
       color:#fff;
     }
   }
@@ -68,7 +72,8 @@ $border-color:#e5e5e5;
       width: 14.2857%;
       border-radius: 50%;
       &.selected,&:hover{
-        background: $light-color;
+        background: $theme-color;
+        color: #fff;
         cursor: pointer;
       }
     }
@@ -81,9 +86,10 @@ $border-color:#e5e5e5;
     li{
       width: 25%;
       border-radius: 50%;
-      line-height: 60px;
+      line-height: 75px;
       &:hover{
-        background: $light-color;
+        background: $theme-color;
+        color: #fff;
         cursor: pointer;
       }
     }
