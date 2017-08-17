@@ -44,7 +44,7 @@ export default class DatePicker extends Component {
   }
 
   showCalendar(){
-    this.setState({showCalen:true,showMonthSelect:false,showYearSelect:false})
+    this.setState({showCalen:!this.state.showCalen,showMonthSelect:false,showYearSelect:false})
   }
 
   pickerBlur(){
@@ -87,7 +87,7 @@ export default class DatePicker extends Component {
     this.setState({showMonthSelect:true,showCalen:false})
   }
 
-  getYearList(startYear,endYear){  //获取年份范围
+  getYearList(startYear,endYear){  //获取年份范围列表
     let yearList = []
     for(let i=startYear;i<=endYear;i++){
       yearList.push(i)
@@ -95,7 +95,7 @@ export default class DatePicker extends Component {
     return yearList
   }
 
-  getDateList(dayNum){
+  getDateList(dayNum){ //获取日期列表
     let dates = []
     for(let i=1;i<dayNum;i++){
       dates.push(i)
@@ -113,6 +113,7 @@ export default class DatePicker extends Component {
 
   render() {
     let {showCalen,year,month,day,monthDNum,selectedDay,showYearSelect,showMonthSelect} = this.state
+    let {disabled} = this.props
     let {syear,smonth,sday} = selectedDay
     let MonthText = ["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"]
     let weekList = ["日","一","二","三","四","五","六"]
@@ -120,7 +121,7 @@ export default class DatePicker extends Component {
     let dayNum = (this.isLeapYear(year)&&month==2)?monthDNum[month]+1:monthDNum[month];
     
     return <div className="date-picker" tabIndex="-1" onBlur={this.pickerBlur}>
-      <div className="date-show" onClick={this.showCalendar}>
+      <div className="date-show" onClick={disabled?"":this.showCalendar}>
         {
           syear&&smonth&&sday?syear+"-"+smonth+"-"+sday:"选择时间"
         }
