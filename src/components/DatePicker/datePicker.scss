@@ -24,7 +24,26 @@ $border-color:#e5e5e5;
     top:42px;
     border:solid 1px $border-color;
     box-sizing: border-box;
+    box-shadow: 2px 2px 10px #999;
     background-color:#fff;
+  }
+  .list-container-left{
+    right: 103%;
+    top: 0px;
+    left: auto;
+    box-shadow: 2px 0px 50px #999;
+  }
+  .list-container-right{
+    right: -103%;
+    top: 0px;
+    left: auto;
+    box-shadow: 2px 0px 50px #999;
+  }
+  .list-container-top{
+    left: 0;
+    top:auto;
+    bottom: 52px;
+    box-shadow: 2px 0px 50px #999;
   }
   .select-module{
     background-color: #fff;
@@ -48,7 +67,6 @@ $border-color:#e5e5e5;
   .week-list,.date-list,.month-list,.year-list{
     width: 100%;
     padding-bottom:10px;
-    box-shadow: 2px 2px 4px #ccc;
     li{
       box-sizing: border-box;
       display: inline-block;

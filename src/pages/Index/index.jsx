@@ -14,7 +14,11 @@ export default class Index extends Component{
 	}
 	render(){
 		return <div className="index-page">
-			<DatePicker />
+			<DatePicker
+        className="date-picker"
+				placement="top"
+			/>
+      <input type="date" />
 		</div>
 	}
 }

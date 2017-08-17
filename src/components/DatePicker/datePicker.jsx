@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router';
 import './datePicker.scss';
+import classnames from '../../utils/classnames.js';
 
 export default class DatePicker extends Component {
   constructor(props) {
@@ -49,9 +50,9 @@ export default class DatePicker extends Component {
 
   pickerBlur(){
     this.setState({
-      showCalen:false,
-      showMonthSelect:false,
-      showYearSelect:false
+      // showCalen:false,
+      // showMonthSelect:false,
+      // showYearSelect:false
     })
   }
 
@@ -113,14 +114,19 @@ export default class DatePicker extends Component {
 
   render() {
     let {showCalen,year,month,day,monthDNum,selectedDay,showYearSelect,showMonthSelect} = this.state
-    let {disabled} = this.props
+    let {disabled,placement} = this.props
     let {syear,smonth,sday} = selectedDay
     let MonthText = ["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"]
     let weekList = ["日","一","二","三","四","五","六"]
     let start = new Date(year,month-1,1).getDay()
     let dayNum = (this.isLeapYear(year)&&month==2)?monthDNum[month]+1:monthDNum[month];
-    
-    return <div className="date-picker" tabIndex="-1" onBlur={this.pickerBlur}>
+    let className = classnames("date-picker",{
+      "date-picker-disabled":disabled,
+    })
+    let listClass=classnames("list-container",{
+      ["list-container-"+placement]:placement
+    })
+    return <div className={className} tabIndex="-1" onBlur={this.pickerBlur}>
       <div className="date-show" onClick={disabled?"":this.showCalendar}>
         {
           syear&&smonth&&sday?syear+"-"+smonth+"-"+sday:"选择时间"
@@ -128,7 +134,7 @@ export default class DatePicker extends Component {
       </div>
       {
       showCalen?
-        <div className="list-container">
+        <div className={listClass}>
           <div className="select-module">
             <span className="left-arrow" onClick={()=>this.calendar_modify(year,month-1,day)}>&#139;	</span>
               <div className="selected-container">
@@ -158,7 +164,7 @@ export default class DatePicker extends Component {
         </div>:null
       }
       {
-        showYearSelect?<div className="list-container">
+        showYearSelect?<div className={listClass}>
           <div className="select-module">
             <span className="left-arrow" onClick={()=>this.setState({year:year-11})}>&#139;	</span>
               <div className="selected-container">
@@ -176,7 +182,7 @@ export default class DatePicker extends Component {
         </div>:null
       }
       {
-        showMonthSelect?<div className="list-container">
+        showMonthSelect?<div className={listClass}>
           <div className="select-module">
             <span className="left-arrow" onClick={()=>this.setState({year:year-1})}>&#139;	</span>
               <div className="selected-container">
