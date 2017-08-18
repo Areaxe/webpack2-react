@@ -1,0 +1,52 @@
+@import '../base/_base';
+$degNum:8;  //圆饼分为多少份
+$diameter:50px;  //直径
+$dirSize:8px;	//小圆点的大小
+$dirR:$dirSize/2;
+.screen{
+	background:rgba(255,255,255,0.6);
+	width: 100vw;
+	min-height: 100vh;
+	height: 100%;
+	position: fixed;
+	z-index: 99;
+}
+.loadEffect{
+		width: $diameter;
+		height: $diameter;
+		position: relative;
+		margin: 0 auto;
+		margin-top: calc(50vh - 150px);
+		span{
+			position: absolute;
+			left:50%;
+			top:$dirR;
+			margin-left: -$dirR;
+			transform-origin: $dirR ($diameter - $dirR) / 2;
+			display: block;
+			line-height: normal;
+			width: $dirSize;
+			height: $dirSize;
+			border-radius: 50%;
+			background: lightskyblue;
+			-webkit-animation: load 1.04s ease infinite;
+		}
+		@-webkit-keyframes load{
+			0%{
+				opacity: 1;
+				width: 1.2*$dirSize;
+				height: 1.2*$dirSize;
+			}
+			100%{
+				opacity: 0.2;
+				width: 0.3*$dirSize;
+				height: 0.3*$dirSize;
+			}
+		}
+		@for $i from 1 through $degNum{
+			span:nth-child(#{$i}){
+				-webkit-transform: rotate($i / $degNum * 1turn);
+				-webkit-animation-delay:0.13s*$i;
+			}
+		}
+  }
