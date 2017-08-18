@@ -1,0 +1,102 @@
+:global(.rc-notification) {
+  position: fixed;
+  z-index: 1000;
+	left: 50%;
+	top:10%;
+}
+:global(.sk-message-info){
+	color:#20d0ff;
+}
+:global(.sk-message-success){
+	color: lawngreen;
+}
+:global(.sk-message-error){
+	color: red;
+}
+:global(.sk-message-warning){
+	color: orange;
+}
+
+:global(.rc-notification-notice) {
+  padding: 7px 20px 7px 10px;
+  border-radius: 3px 3px;
+  border: 1px solid #999;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border: 0px solid rgba(0, 0, 0, 0);
+  background: #fff;
+  display: block;
+  width: auto;
+  line-height: 1.5;
+  vertical-align: middle;
+  position: relative;
+  margin: 10px 0;
+}
+.rc-notification-notice-closable {
+  padding-right: 20px;
+}
+
+:global(.rc-notification-fade-enter) {
+  opacity: 0;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+          animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+:global(.rc-notification-fade-leave) {
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+          animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+:global(.rc-notification-fade-enter.rc-notification-fade-enter-active) {
+  -webkit-animation-name: rcNotificationFadeIn;
+          animation-name: rcNotificationFadeIn;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+:global(.rc-notification-fade-leave.rc-notification-fade-leave-active) {
+  -webkit-animation-name: rcDialogFadeOut;
+          animation-name: rcDialogFadeOut;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+@-webkit-keyframes rcNotificationFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes rcNotificationFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes rcDialogFadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes rcDialogFadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
