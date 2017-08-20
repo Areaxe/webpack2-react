@@ -48,9 +48,9 @@ class Input extends React.Component{
     return check?value:null   //如果通过验证，则返回数据，如果未通过验证，则返回null
   }
   onTextBlur(){
+    let inputText = this.getValue()
+    let result = this.checkInput(inputText)
     if(this.props.onBlur){
-      let inputText = this.getValue()
-      let result = this.checkInput(inputText)
       this.props.onBlur(inputText,result)
     }
   }
