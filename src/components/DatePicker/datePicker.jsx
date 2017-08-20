@@ -98,7 +98,7 @@ export default class DatePicker extends Component {
 
   getDateList(dayNum){ //获取日期列表
     let dates = []
-    for(let i=1;i<dayNum;i++){
+    for(let i=1;i<=dayNum;i++){
       dates.push(i)
     }
     return dates

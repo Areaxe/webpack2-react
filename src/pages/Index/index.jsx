@@ -23,7 +23,7 @@ export default class Index extends Component{
       <Input
         maxSize={5}
         defaultValue=""
-        required
+        required={false}
         className="input"
         placeholder="这是输入框"
         errorMessage={"错误的输入"}
