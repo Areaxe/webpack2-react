@@ -6,6 +6,7 @@ import Input from 'components/Input/input.jsx';
 import Directorie from 'components/Directories/documents.jsx';
 import DatePicker from 'components/DatePicker/datePicker.jsx';
 import message from 'components/messages/messages.jsx';
+import Test from '../../es7test/test.jsx';
 
 export default class Index extends Component{
 	constructor(props) {
@@ -33,6 +34,7 @@ export default class Index extends Component{
 			<DatePicker
         className="date-picker"
 			/>
+      <Test />
 		</div>
 	}
 }

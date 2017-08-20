@@ -9,10 +9,10 @@ export default class DatePicker extends Component {
     this.state = {
       monthDNum: [0,31,28,31,30,31,30,31,31,30,31,30,31],
       showCalen: false,
-      year:"",
+      year:"",    //当前的年月日
       month:"",
       day:"",
-      selectedDay:{}
+      selectedDay:{}  //记录选择的时间
     };
     this.showYear = this.showYear.bind(this)
     this.showMonth = this.showMonth.bind(this)
