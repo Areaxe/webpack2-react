@@ -1,8 +1,8 @@
 import React from 'react';
 import Notification from 'rc-notification';
-import styles from '../styles/components/_message.scss';
+import styles from './messages.scss';
 
-let defaultDuration = 1000;
+let defaultDuration = 1;
 let defaultTop;
 let messageInstance;
 let key = 1;

@@ -1,7 +1,5 @@
 import React,{findDOMNode} from 'react';
-import CSSModules from 'react-css-modules';
-import styles from '../styles/components/_loading.scss';
-import {connect} from 'react-redux';
+import styles from './_loading.scss';
 
 class Loading extends React.Component{
   constructor(props) {
@@ -25,9 +23,5 @@ class Loading extends React.Component{
       </div>:null
   }
 }
-function select(state){
-  return {
-    loading:state.LoadingReducer.loading
-  };
-}
-export default connect(select)(CSSModules(Loading, styles,{allowMultiple:true}));
+
+export default Loading
