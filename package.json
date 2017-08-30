@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start": "webpack-dev-server --config webpack.config.js --progress --open --colors"
+    "start": "webpack-dev-server --config webpack_product.config.js --progress --open --colors",
+    "dev": "webpack-dev-server --config webpack_dev.config.js --progress --open --colors"
   },
   "author": "",
   "license": "ISC",
@@ -36,6 +37,7 @@
     "react-router-dom": "^4.1.1",
     "sass-loader": "^6.0.6",
     "transfer-webpack-plugin": "^0.1.4",
-    "webpack-dev-server": "^2.1.0-beta.10"
+    "webpack-dev-server": "^2.1.0-beta.10",
+    "webpack-merge": "^4.1.0"
   }
 }
