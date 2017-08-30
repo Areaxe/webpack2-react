@@ -1,20 +1,14 @@
-var express = require("express");
-var webpackDevMiddleware = require("webpack-dev-middleware");
-var webpack = require("webpack");
+var webpack = require('webpack');
 var webpackConfig = require("./webpack.config");
+var merge = require("webpack-merge");
 
-var app = express();
-var compiler = webpack(webpackConfig);
+var config = {
+  devtool: "cheap-eval-source-map",
+  plugins: [
+    new webpack.DefinePlugin({
+        'process.env.NODE_ENV': JSON.stringify('devepment')
+    })
+  ],
+};
 
-app.use(webpackDevMiddleware(compiler, {
-  publicPath: "/" // Same as `output.publicPath` in most cases.
-}));
-
-app.listen(3000, function () {
-  console.log("Listening on port 3000!");
-});
-
-app.use(webpackDevMiddleware(compiler, {
-  lazy: true,
-  filename: "bundle.js" // Same as `output.filename` in most cases.
-}));
+module.exports = merge( webpackConfig, config );
