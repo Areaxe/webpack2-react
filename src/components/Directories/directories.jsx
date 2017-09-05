@@ -60,12 +60,11 @@ export default class Directories extends Component {
 
   render() {
     const { directorie, selected } = this.props;
-    const { selectedId } = this.state;
-    const selectId = selectedId || selected;
+    const selectedId =  this.state.selectedId || selected;
     return <ul>
       <li>
         {
-          this.renderChildren( [ directorie ], selectId, directorie.id, true, 0 )
+          this.renderChildren( [ directorie ], selectedId, directorie.id, true, 0 )
         }
       </li>
     </ul>
