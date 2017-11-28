@@ -61,7 +61,7 @@ export default class Index extends Component {
   nextList() {
     let sliderList = this.refs.slider_list;
     if (this.curIndex < this.childLength) {
-      if (this.childLength - this.curIndex > 2 * this.showItemNUm) {
+      if (this.childLength - this.curIndex >= 2 * this.showItemNUm) {
         this.curIndex += this.showItemNUm;
       } else if (this.childLength - this.curIndex > this.showItemNUm) {
         this.curIndex += this.childLength % this.showItemNUm;
