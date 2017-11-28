@@ -1,8 +1,10 @@
-$theme-color:#7BAF30;
+$theme-color: lightblue;
+$theme-font-color:#fff;
 $light-color:lightgreen;
 $border-color:#e5e5e5;
 .date-picker{
   width: 300px;
+  color: #666;
   position: relative;
   line-height: 42px;
   text-align: left;
@@ -10,13 +12,16 @@ $border-color:#e5e5e5;
   &:focus{
     outline: none;
   }
+
   .date-show{
     background-color:#fff;
+    color: #666;
     border:solid 1px $border-color;
     padding:0 20px;
     line-height: inherit;
     text-align: inherit;
   }
+
   .list-container{
     position: absolute;
     width: inherit;
@@ -27,6 +32,7 @@ $border-color:#e5e5e5;
     box-shadow: 2px 2px 10px #999;
     background-color:#fff;
   }
+
   .list-container-left{
     right: 103%;
     top: 0px;
@@ -57,11 +63,13 @@ $border-color:#e5e5e5;
       }
     }
     .selected-container{
-      width: 60%;
+      width: 100%;
     }
     .left-arrow,.right-arrow{
-      width: 20%;
+      background-color: lightblue;
+      width: 15%;
       font-size: 24px;
+      height: auto;
     }
   }
   .week-list,.date-list,.month-list,.year-list{
@@ -82,7 +90,7 @@ $border-color:#e5e5e5;
     background-color: $theme-color;
     li{
       width: 14.2857%;
-      color:#fff;
+      color:$theme-font-color;
     }
   }
   .date-list{

@@ -1,43 +1,54 @@
-.directories-container{
-    width: 250px;
-    .title{
-        font-size: 14px;
-        padding: 13px 0;
-        line-height: 24px;
-        &:hover{
-            background-color: lightblue;
-            color: #3047fe;
-        }
-        
+.directories-container {
+  width: 250px;
+  .title {
+    font-size: 14px;
+    padding: 13px 0;
+    line-height: 24px;
+    &:hover {
+      background-color: lightblue;
+      color: #3047fe;
     }
-    .directoire{
-        font-size: 14px;
-        padding: 13px 0;
-        line-height: 24px;
-        position: relative;
-        .arrow{
-            position: absolute;
-            width: 10px;
-            right: 0;
-            top:0;
-            font-size: 20px;
-            font-weight: normal;
-            padding: 13px 0;
-            line-height: 24px;
-            width: 50px;
-            text-align: center;
-            transition: all .3s ease-in-out;
-            cursor: default;
-        }
-        .arrow-down{
-            transform: rotate(90deg);
-        }
+  }
+  .directoire {
+    font-size: 14px;
+    padding: 13px 0;
+    line-height: 24px;
+    position: relative;
+    .arrow {
+      position: absolute;
+      width: 10px;
+      right: 0;
+      top: 0;
+      font-size: 20px;
+      font-weight: normal;
+      padding: 13px 0;
+      line-height: 24px;
+      width: 50px;
+      text-align: center;
+      transition: all .3s ease-in-out;
+      cursor: default;
     }
-    .big-directiore{
-        font-size: 16px;
+    .arrow-down {
+      transform: rotate(90deg);
     }
-    .selected{
-        background-color: lightblue;
-        color: #3047fe;
-    }
+  }
+  .big-directiore {
+    font-size: 16px;
+  }
+  .selected {
+    background-color: lightblue;
+    color: #3047fe;
+  }
+  .document-hide{
+    transform-origin: top;
+    transform: scaleY(0.7);
+    opacity: 0;
+    height: 0;
+    // display: none;
+    transition: all .1s ease-in-out,opacity .1s ease-out;
+  }
+  .document-block{
+    transform-origin: top;
+    transition: all .15s ease-in-out;
+  }
 }

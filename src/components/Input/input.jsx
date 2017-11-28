@@ -22,7 +22,6 @@ class Input extends React.Component{
     // if(this.state.init&&nextProps.defaultValue||nextProps.defaultValue!==this.props.defaultValue){
     //    this.setState({text:nextProps.defaultValue,init:false});
     // }
-    console.log("===================")
     this.setText(nextProps)
   }
   componentWillMount(){

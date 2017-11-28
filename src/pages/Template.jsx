@@ -1,9 +1,7 @@
 import React,{Component} from 'react';
 
 export default class Template extends Component{
-	componentDidMount(){
-		console.log('aaaaaaaaaaa')
-	}
+	componentDidMount(){}
 	render(){
 		return <div>{this.props.children}</div>
 	}

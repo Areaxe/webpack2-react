@@ -1,0 +1,117 @@
+$minListWidth: 1200px;
+.list-container{
+	background-color: #666;
+	user-select: none;
+	.slider-container{
+		position: relative;
+		overflow: hidden;
+	}
+	.left-arrow,.right-arrow{
+		display: flex;
+		height: 100%;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		color: #fff;
+		text-align: center;
+		top: 0;
+		width: 42px;
+		background-color: rgba(96,96,96,.6);
+		font-size: 44px;
+		z-index: 5;
+		opacity: 0;
+		transition: all ease-in-out .5s;
+		&:hover{
+			cursor: pointer;
+		}
+	}
+	.left-arrow{
+		left: 0;
+	}
+	.right-arrow{
+		right: 0;
+	}
+	&:hover{
+		.left-arrow,.right-arrow{
+			opacity: 1;
+		}
+	}
+}
+.animate-list{
+	min-width: $minListWidth;
+	width: 100%;
+	white-space: nowrap;
+	position: relative;
+	$besier:cubic-bezier(.4,0,.2,1);
+	.animate-item{
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+		.img-bg{
+			width: 100%;
+		}
+	}
+	.item-container{
+		position: absolute;
+		padding-top: 90px;
+		text-align: center;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		box-sizing: border-box;
+		background-color: rgba(96,96,96,.6);
+		transition: all .4s $besier;
+		&:hover{
+			color: #fff;
+			background-color: rgba(51, 205,229,0.9);
+			padding-top: 50px;
+			cursor:pointer;
+			& .item-title{
+				margin-top: 20px;
+			}
+			& .item-content, & .item-btn{
+				opacity: 1;
+			}
+		}
+
+		.item-icon{
+			width: 60px;
+			height: 60px;
+			color: #fff;
+			margin: 0 auto;
+			background-color: rgba(96,96,96,.1);
+			line-height: 60px;
+		}
+		.item-title{
+			margin-top:50px;
+			font-size: 22px;
+			color: #fff;
+			font-weight: bold;
+			transition: all $besier .4s;
+		}
+		.item-content{
+			white-space: normal;
+			opacity: 0;
+			margin-top: 20px;
+			color: #fff;
+			font-size: 14px;
+			line-height: 1.6em;
+			padding: 5px 15px;
+			text-align: left;
+			transition: all $besier .3s;
+		}
+		.item-btn{
+			border: solid 1px #fff;
+			background: none;
+			padding: 8px 26px;
+			color: #fff;
+			transition: all $besier .6s;
+			opacity: 0;
+			margin-top: 20px;
+			&:hover{
+				background-color: #fff;
+				color: #33cde5;
+			}
+		}
+	}
+}
