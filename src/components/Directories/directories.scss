@@ -1,6 +1,5 @@
 .directories-container {
   width: 250px;
-  transition: all .3s ease-in-out;
   .title {
     font-size: 14px;
     padding: 13px 0;
@@ -41,16 +40,15 @@
     color: #3047fe;
   }
   .document-hide{
-    >li{
-      transform: scaleY(0.5);
-      opacity: 0;
-      height: 0;
-      transition: all .2s ease-in-out;
-    }
+    transform-origin: top;
+    transform: scaleY(0.7);
+    opacity: 0;
+    height: 0;
+    // display: none;
+    transition: all .1s ease-in-out,opacity .1s ease-out;
   }
   .document-block{
-     >li{
-      transition: all .15s ease-in-out;
-     }
+    transform-origin: top;
+    transition: all .15s ease-in-out;
   }
 }

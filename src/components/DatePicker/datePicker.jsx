@@ -21,6 +21,7 @@ export default class DatePicker extends Component {
     this.pickerBlur = this.pickerBlur.bind(this)
     this.showCalendar = this.showCalendar.bind(this)
   }
+
   componentDidMount(){
     let defaultValue = this.props.defaultValue
     let date = defaultValue?new Date(defaultValue):new Date()
@@ -136,12 +137,12 @@ export default class DatePicker extends Component {
       showCalen?
         <div className={listClass}>
           <div className="select-module">
-            <span className="left-arrow" onClick={()=>this.calendar_modify(year,month-1,day)}>&#139;	</span>
+            <span className="left-arrow" onClick={()=>this.calendar_modify(year,month-1,day)}> ‹	</span>
               <div className="selected-container">
                 <span onClick={this.showMonth}>{MonthText[month-1]}</span>&nbsp;
                 <span onClick={this.showYear}>{year}</span>
               </div>
-            <span className="right-arrow" onClick={()=>this.calendar_modify(year,month+1,day)} >&#155;</span>
+            <span className="right-arrow" onClick={()=>this.calendar_modify(year,month+1,day)} >  › </span>
           </div>
           <ul className="week-list">
             {
@@ -166,11 +167,11 @@ export default class DatePicker extends Component {
       {
         showYearSelect?<div className={listClass}>
           <div className="select-module">
-            <span className="left-arrow" onClick={()=>this.setState({year:year-11})}>&#139;	</span>
+            <span className="left-arrow" onClick={()=>this.setState({year:year-11})}> ‹	</span>
               <div className="selected-container">
                 {year+"-"+(year+11)}
               </div>
-            <span className="right-arrow" onClick={()=>this.setState({year:year+11})}>&#155;</span>
+            <span className="right-arrow" onClick={()=>this.setState({year:year+11})}> › </span>
           </div>
           <ul className="year-list">
             {
@@ -184,11 +185,11 @@ export default class DatePicker extends Component {
       {
         showMonthSelect?<div className={listClass}>
           <div className="select-module">
-            <span className="left-arrow" onClick={()=>this.setState({year:year-1})}>&#139;	</span>
+            <span className="left-arrow" onClick={()=>this.setState({year:year-1})}> ‹	</span>
               <div className="selected-container">
                {year}
               </div>
-            <span className="right-arrow" onClick={()=>this.setState({year:year+1})}>&#155;</span>
+            <span className="right-arrow" onClick={()=>this.setState({year:year+1})}>  › </span>
           </div>
           <ul className="month-list">
             {

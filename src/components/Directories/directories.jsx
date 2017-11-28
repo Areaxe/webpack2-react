@@ -15,7 +15,7 @@ export default class Directories extends Component {
 
   toggleNode(nodeId,event) {   //  展开闭合目录效果
     this.setState({
-      [nodeId]: !this.state[nodeId], //
+      [nodeId]: !this.state[nodeId], 
     })
   }
 
@@ -25,7 +25,7 @@ export default class Directories extends Component {
 
   renderChildren(childList, selectedId, parentId,ifShow = false, floor = 1) {
     const showcur = this.state[parentId] || ifShow || !floor  //  if parent is Selected or it is zero floor or parent want him show
-    return <ul className={ showcur ? "document-block" : "document-hide" } id={`ul${parentId}`} ref={`ul${parentId}`}>
+    return <ul className={ showcur ? "document-block" : "document-hide" } >
       {
         childList.map(item => {
           let isDirectiore = item.content_html?false:true;
