@@ -1,7 +1,7 @@
 import React,{findDOMNode} from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import './iconfont.scss';
+import './iconfont.css';
 import classnames from '../../utils/classnames';
 
 class IconFont extends React.Component{

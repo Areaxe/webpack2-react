@@ -14,13 +14,13 @@ module.exports = {
     contentBase: './src/www',  //Relative directory for base of server
     hot: true,        //Live-reload  
     inline: true,
-    port: 3000,        //Port Number
+    port: 3001,        //Port Number
     host: 'localhost'    //'localhost'  //Change to '0.0.0.0' for external facing server
   },
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath:'/'
+    publicPath:'/',
   },
   resolve: {
     extensions: [".jsx", ".js","scss","css"],
@@ -57,9 +57,9 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf|mp3)$/,
-        use: [
-          'file-loader'
-        ]
+        use: [{
+          loader: 'file-loader?name=[name].[ext]',
+        }]
       },
         // {
         //   test: /\.(csv|tsv)$/,

@@ -24,16 +24,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory,hashHistory } from 'react-router'
 import Home from './pages/Index/index';
-import List from './pages/List/list.jsx';
+import UserInfo from './pages/UserInfo/UserInfo';
 import Template from './pages/Template.jsx';
 import './assets/styles/base.scss';
 
 ReactDOM.render((
   <Router history={browserHistory}>
-    <Route component={Template} >
+    <Route path="/" component={Template} >
        <IndexRoute component={Home}/>
-       <Route path="/" component={Home}/>
-       <Route path="/list" component={List} />
+       <Route path="userinfo" component={UserInfo}/>
     </Route>
   </Router>
 ), document.getElementById('root'));
