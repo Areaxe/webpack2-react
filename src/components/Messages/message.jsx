@@ -1,32 +1,33 @@
-import React from 'react';
-import Notification from 'rc-notification';
-import styles from './messages.scss';
+
+import React from "react";
+import Notification from "rc-notification";
+import styles from "./messages.scss";
 
 let defaultDuration = 1;
 let defaultTop;
 let messageInstance;
 let key = 1;
-let prefixCls = 'sk-message';
+let prefixCls = "sk-message";
 let getContainer;
 
 function getMessageInstance() {
   messageInstance = messageInstance || Notification.newInstance({
-      transitionName: 'move-up',
+      transitionName: "move-up",
       style: { top: defaultTop }, // 覆盖原来的样式
       getContainer,
     });
   return messageInstance;
 }
 
-let NoticeType = 'info' | 'success' | 'error' | 'warning' | 'loading';
+let NoticeType = "info" | "success" | "error" | "warning" | "loading";
 
 function notice(content,duration,type,onClose,) {
   let iconType = ({
-    info: 'info-circle',
-    success: 'check-circle',
-    error: 'cross-circle',
-    warning: 'exclamation-circle',
-    loading: 'loading',
+    info: "info-circle",
+    success: "check-circle",
+    error: "cross-circle",
+    warning: "exclamation-circle",
+    loading: "loading",
   })[type];
 
   setTimeout(function(){
@@ -34,12 +35,12 @@ function notice(content,duration,type,onClose,) {
       messageInstance.destroy();
       messageInstance = null;
     }
-  },defaultDuration*1000)
+  }, defaultDuration * 1000);
 
   let instance = getMessageInstance();
   instance.notice({
     key,
-    duration:duration?duration:10,
+    duration:duration ? duration : 10,
     style: {},
     content: (
       <div className={`sk-message-custom-content sk-message-${type}`}>
@@ -59,23 +60,23 @@ function notice(content,duration,type,onClose,) {
 
 export default {
   info(content,duration , onClose) {
-    return notice(content, duration, 'info', onClose);
+    return notice(content, duration, "info", onClose);
   },
   success(content, duration, onClose) {
-    return notice(content, duration, 'success', onClose);
+    return notice(content, duration, "success", onClose);
   },
   error(content, duration, onClose) {
-    return notice(content, duration, 'error', onClose);
+    return notice(content, duration, "error", onClose);
   },
   // Departed usage, please use warning()
   warn(content, duration, onClose) {
-    return notice(content, duration, 'warning', onClose);
+    return notice(content, duration, "warning", onClose);
   },
   warning(content, duration, onClose) {
-    return notice(content, duration, 'warning', onClose);
+    return notice(content, duration, "warning", onClose);
   },
   loading(content, duration, onClose) {
-    return notice(content, duration, 'loading', onClose);
+    return notice(content, duration, "loading", onClose);
   },
   config(options) {
     if (options.top !== undefined) {

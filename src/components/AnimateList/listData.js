@@ -1,59 +1,60 @@
+
 export default [
 	{ 
 		icon:"1", 
 		title:"音视频解决方案", 
 		content:"一站式提供“海量存储、高效分发、极速网络”等服务， 轻松坐享CCTV-5、微博的传播能力",
-		bg_img:"https://img.alicdn.com/tps/TB1PVwkLXXXXXagXFXXXXXXXXXX-576-840.jpg",
+		bgImg:"https://img.alicdn.com/tps/TB1PVwkLXXXXXagXFXXXXXXXXXX-576-840.jpg",
 	},{ 
 		icon:"2", 
 		title:"渲染解决方案", 
 		content:"基于超强计算和存储能力，面对影视广告、游戏等行业的染需求，提供多层次渲染解决方案", 
-		bg_img:"https://img.alicdn.com/tps/TB1WMouLXXXXXciXXXXXXXXXXXX-576-840.jpg",
+		bgImg:"https://img.alicdn.com/tps/TB1WMouLXXXXXciXXXXXXXXXXXX-576-840.jpg",
 	},{ 
 		icon:"3", 
 		title:"O2O解决方案", 
 		content:"帮助客户快速拓展O2O业务，提升用户使用体验，助力O2O客户走进互联网的“场景时代",
-		bg_img:"https://img.alicdn.com/tps/TB1xmb3LXXXXXbXaXXXXXXXXXXX-576-840.jpg",
+		bgImg:"https://img.alicdn.com/tps/TB1xmb3LXXXXXbXaXXXXXXXXXXX-576-840.jpg",
 	},{ 
 		icon:"4", 
 		title:"政务解决方案", 
 		content:"立足于对政务信息化的深刻理解，构筑开放共享、敏捷高效、安全可信的政务云基础架构", 
-		bg_img:"https://img.alicdn.com/tps/TB1VqEvLXXXXXb2XXXXXXXXXXXX-576-840.jpg",
+		bgImg:"https://img.alicdn.com/tps/TB1VqEvLXXXXXb2XXXXXXXXXXXX-576-840.jpg",
 	},
 	{ 
 		icon:"5", 
 		title:"物联网解决方案", 
 		content:"定制化方案助力传统硬件厂商和中小平台服务商快速搭建稳定可靠、安全可控的物联网平台", 
-		bg_img:"https://img.alicdn.com/tps/TB1ty_YLXXXXXX4apXXXXXXXXXX-576-840.jpg",
+		bgImg:"https://img.alicdn.com/tps/TB1ty_YLXXXXXX4apXXXXXXXXXX-576-840.jpg",
 	},
 	{ 
 		icon:"6", 
 		title:"电商解决方案", 
 		content:"结合大数据能力帮助电商企业快速搭建平台、应对业务高并发，剖析秒杀、视频直播等场景", 
-		bg_img:"https://img.alicdn.com/tps/TB16hkwLXXXXXX6XXXXXXXXXXXX-576-840.jpg",
+		bgImg:"https://img.alicdn.com/tps/TB16hkwLXXXXXX6XXXXXXXXXXXX-576-840.jpg",
 	},
 	{ 
 		icon:"7", 
 		title:"APP解决方案", 
 		content:"助移动开发者轻松应对用户数爆发式增长,实现基于大数据的精细化运营、增强用户黏性", 
-		bg_img:"https://img.alicdn.com/tps/TB19Jz6LXXXXXacaXXXXXXXXXXX-576-840.jpg",
+		bgImg:"https://img.alicdn.com/tps/TB19Jz6LXXXXXacaXXXXXXXXXXX-576-840.jpg",
 	},
 	{ 
 		icon:"8", 
 		title:"金融解决方案", 
 		content:"为金融行业提供量身定制的云计算服务，具备低成本、高弹性、高可用、安全合规的特性", 
-		bg_img:"https://img.alicdn.com/tps/TB1RJ_8LXXXXXX9aXXXXXXXXXXX-576-840.jpg",
+		bgImg:"https://img.alicdn.com/tps/TB1RJ_8LXXXXXX9aXXXXXXXXXXX-576-840.jpg",
 	},
 	{ 
 		icon:"9", 
 		title:"游戏解决方案", 
 		content:"为游戏开发者提供专属集群、尊享VIP服务、专项扶持基金、多场景游戏部署解决方案", 
-		bg_img:"https://img.alicdn.com/tps/TB1dDT4LXXXXXabaXXXXXXXXXXX-576-840.jpg",
+		bgImg:"https://img.alicdn.com/tps/TB1dDT4LXXXXXabaXXXXXXXXXXX-576-840.jpg",
 	},
 	{ 
 		icon:"10", 
 		title:"医疗解决方案", 
 		content:"融合云计算大数据，连接用户、医疗设备、医疗机构和医疗ISV，构建医疗行业云生态", 
-		bg_img:"https://img.alicdn.com/tps/TB1C8gpLXXXXXaWXpXXXXXXXXXX-576-840.jpg",
+		bgImg:"https://img.alicdn.com/tps/TB1C8gpLXXXXXaWXpXXXXXXXXXX-576-840.jpg",
 	},
-]
+];

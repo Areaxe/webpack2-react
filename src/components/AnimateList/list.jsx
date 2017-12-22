@@ -1,9 +1,7 @@
-import React, {Component} from 'react';
-import message from 'components/messages/messages.jsx';
-import IconFont from 'components/IconFont/iconFont';
-import dataList from './listData.js';
 
-import './list.scss';
+import React, {Component} from "react";
+import dataList from "./listData.js";
+import "./list.scss";
 
 export default class Index extends Component {
   constructor(props) {
@@ -18,23 +16,21 @@ export default class Index extends Component {
   componentDidMount() {
     let sliderList = this.refs.slider_list;
     let sliderItem = sliderList.querySelectorAll(".animate-item");
-    let slider_container = this.refs.slider_container;
+    let sliderContainer = this.refs.slider_container;
     this.childLength = sliderItem.length;
-    this.showItemNUm = this.showItemNUm > this.childLength
-      ? this.childLength
-      : this.showItemNUm;
-    sliderList.style.width = (slider_container.offsetWidth * this.childLength / this.showItemNUm).toFixed(3) + "px";
+    this.showItemNUm = this.showItemNUm > this.childLength ? this.childLength : this.showItemNUm;
+    sliderList.style.width = (sliderContainer.offsetWidth * this.childLength / this.showItemNUm).toFixed(3) + "px";
     sliderItem.forEach((item) => {
       item.style.width = 100 / this.childLength + "%";
-    })
+    });
     this.timer = null;
     window.onresize = () => {
       clearTimeout(this.timer);
       this.timer = setTimeout(() => {
-        sliderList.style.width = (slider_container.offsetWidth * this.childLength / this.showItemNUm).toFixed(3) + "px";
-        slider_container.style.height = (slider_container.width / this.showItemNUm) + "px";
+        sliderList.style.width = (sliderContainer.offsetWidth * this.childLength / this.showItemNUm).toFixed(3) + "px";
+        sliderContainer.style.height = (sliderContainer.width / this.showItemNUm) + "px";
       }, 10);
-    }
+    };
   }
 
   preList() {
@@ -45,12 +41,12 @@ export default class Index extends Component {
       } else {
         this.curIndex = 0;
       }
-      sliderList.style.marginLeft = "-" + (this.curIndex * sliderList.offsetWidth / this.childLength) + 'px';
-      sliderList.style.transition = 'all .5s cubic-bezier(.4,0,.2,1)';
+      sliderList.style.marginLeft = "-" + (this.curIndex * sliderList.offsetWidth / this.childLength) + "px";
+      sliderList.style.transition = "all .5s cubic-bezier(.4,0,.2,1)";
     } else {
       this.curIndex = 0;
-      sliderList.style.marginLeft = '0px';
-      sliderList.style.transition = '';
+      sliderList.style.marginLeft = "0px";
+      sliderList.style.transition = "";
     }
   }
 
@@ -64,17 +60,16 @@ export default class Index extends Component {
       } else {
         return;
       }
-      console.log(this.curIndex)
       if (this.curIndex < this.childLength) {
-        sliderList.style.marginLeft = "-" + (this.curIndex * sliderList.offsetWidth / this.childLength) + 'px';
-        sliderList.style.transition = 'all .5s cubic-bezier(.4,0,.2,1)';
+        sliderList.style.marginLeft = "-" + (this.curIndex * sliderList.offsetWidth / this.childLength) + "px";
+        sliderList.style.transition = "all .5s cubic-bezier(.4,0,.2,1)";
       }
     }
   }
 
   render() {
-    let data_list = dataList || [];
-    let {style} = this.props;
+    let daList = dataList || [];
+    let { style } = this.props;
     return <div className="list-container" style={style}>
       <div className="slider-container" ref="slider_container">
         <div className="left-arrow" onClick={() => this.preList()}>
@@ -82,16 +77,16 @@ export default class Index extends Component {
         </div>
         <ul className="animate-list" ref="slider_list">
           {
-            data_list.map((item, i) => {
+            daList.map((item, i) => {
             return <li key={item + i} className="animate-item">
-              <img className="img-bg" src={item.bg_img}/>
+              <img className="img-bg" src={item.bgImg}/>
               <div className="item-container">
                 <div className="item-icon">{item.icon}</div>
                 <div className="item-title">{item.title}</div>
                 <div className="item-content">{item.content}</div>
                 <button className="item-btn">查看详情</button>
               </div>
-            </li>
+            </li>;
           })
         }
         </ul>
@@ -99,6 +94,6 @@ export default class Index extends Component {
           ›
         </div>
       </div>
-    </div>
+    </div>;
   }
 }

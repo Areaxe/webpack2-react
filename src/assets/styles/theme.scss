@@ -18,9 +18,9 @@ $xd-head-height:80px;
 $xd-footer-height:82px;
 
 :global(.transitionWrapper-enter) {
-    opacity: 0.01;
-		background-color: #f00;
-		animation: enterAnimateLeft 0.5s ease-in;
+    opacity: 1;
+	background-color: #00f;
+	animation: enterAnimateLeft 5s ease-in;
 }
  
 :global(.transitionWrapper-enter.transitionWrapper-enter-active) {
@@ -28,22 +28,57 @@ $xd-footer-height:82px;
 }
  
 :global(.transitionWrapper-leave) {
-    opacity: 1;
+    opacity: 0;
+	background-color: #f0f0f0;
     transition: opacity 0.3s ease-in;
 }
  
 :global(.transitionWrapper-leave.transitionWrapper-leave-active) {
     opacity: 0;
 }
- 
-.transitionWrapper {
-    position: relative;
-}
 
 @keyframes enterAnimateLeft{
 	from{
 		margin-left: -1vw;
 	}to{
+		background-color: #f00;
 		margin-left: 0;
 	}
+}
+
+.slide-in-appear {
+  transform: translate3D(100%, 0, 0);
+  transition: all 300ms linear;
+
+  &.slide-in-appear-active {
+    transform: translate3D(0, 0, 0);
+  }
+}
+
+.slide-in-enter {
+  transform: translate3D(100%, 0, 0);
+  transition: all 300ms linear;
+
+  &.slide-in-enter-active {
+    transform: translate3D(0, 0, 0);
+  }
+}
+
+// 向左滑出
+.slide-in-leave {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  transform: translate3D(0, 0, 0);
+  transition: all 300ms linear;
+
+  &.slide-in-leave-active {
+    opacity: 0.01;
+    transform: translate3D(-100%, 0, 0);
+  }
+}
+
+@keyframes leaveAnimate {
+  
 }

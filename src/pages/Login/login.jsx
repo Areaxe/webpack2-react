@@ -2,7 +2,7 @@
 import React,{Component} from "react";
 import {Link} from "react-router";
 
-export default class NotFound extends Component{
+export default class Login extends Component{
 	constructor(props) {
 		super(props);
 		this.state = {};
@@ -10,7 +10,7 @@ export default class NotFound extends Component{
 
 	render(){
 		return <div className="not-found-page">
-			404
+			
 		</div>;
 	}
 }

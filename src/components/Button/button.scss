@@ -1,6 +1,4 @@
-
-@import '../../assets/styles/theme.scss';
-
+@import "../../assets/styles/theme.scss";
 .general-button{
     height:42px;
     display: inline-block;
@@ -63,9 +61,9 @@
       color:#999;
       border:solid 1px #999;
       opacity: .8;
-    &:hover{
-      background-color:$xd-main-white;
-    }
+      &:hover{
+        background-color:$xd-main-white;
+      }
     }
   }
 }

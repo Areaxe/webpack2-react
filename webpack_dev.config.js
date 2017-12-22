@@ -1,12 +1,12 @@
-var webpack = require('webpack');
-var webpackConfig = require("./webpack.config");
-var merge = require("webpack-merge");
+let webpack = require("webpack");
+let webpackConfig = require("./webpack.config");
+let merge = require("webpack-merge");
 
-var config = {
+let config = {
   devtool: "cheap-eval-source-map",
   plugins: [
     new webpack.DefinePlugin({
-        'process.env.NODE_ENV': JSON.stringify('devepment')
+        "process.env.NODE_ENV": JSON.stringify("devepment")
     })
   ],
 };
