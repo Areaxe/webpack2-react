@@ -1,3 +1,15 @@
 {
-  "presets": ["env","react","es2015", "stage-0"]
+  "presets": ["env","react","es2015", "stage-0"],
+  "env": {
+    "build": {
+      "optional": [ "optimisation", "minification" ]   //
+    },
+    "test": {
+      "presets": ["env", "stage-2"],
+      "plugins": ["istanbul", "babel-plugin-transform-es2015-modules-umd"]
+    }
+  }
 }
+
+// webpack 2提供了对ES模块的本机支持。然而，Jest在Node中运行，因此需要将ES模块转换为CommonJS模块。
+//因此，如果您正在使用webpack 2，您很可能希望在测试环境中，将Babel的模块配置到CommonJS模块。

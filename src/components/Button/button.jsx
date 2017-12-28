@@ -13,23 +13,21 @@ class Button extends React.Component{
     return this.props != nextProps || this.state !== nextState;
   }
 
-  handleClick(){
-    if(this.props.onClick){
-      this.props.onClick();
-    }
+  handleClick(onClick){
+    onClick && onClick();
   }
   
   render(){
-		let { value, type = "button", name, className, children } = this.props;
-		className = classnames("general-button",{ [className]:className });
+		let { value, type = "button", name, className, children, disabled, onClick } = this.props;
+		let ClassName = classnames("general-button",{ [className]:className });
 
-    return(<div className={className}>
+    return(<div className={ClassName}>
             <button
 							value={value}
               type={type}
               className={"btn" + (name ? " btn-" + name : "")}
-              disabled={this.props.disabled}
-              onClick = {this.handleClick.bind(this)}
+              disabled={disabled}
+              onClick = {this.handleClick.bind(this,onClick)}
 						>
 						{children}
             </button>
@@ -43,7 +41,7 @@ Button.propTypes = {
   type:PropTypes.string,
   onClick:PropTypes.func,
   className:PropTypes.string,
-  children:PropTypes.oneOfType([ PropTypes.node, PropTypes.element ])
+  children:PropTypes.oneOfType([PropTypes.node, PropTypes.element])
 };
 
 Button.defaultProps = {

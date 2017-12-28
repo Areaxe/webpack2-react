@@ -137,12 +137,12 @@ export default Input;
 
 Input.propTypes = {
   errorMessage:PropTypes.string,
-  verification:PropTypes.oneOfType([ PropTypes.func,PropTypes.bool,PropTypes.object ]),
+  verification:PropTypes.oneOfType([PropTypes.func,PropTypes.bool,PropTypes.object]),
   onBlur:PropTypes.func,
   onChange:PropTypes.func,
   placeholder:PropTypes.string,
   type:PropTypes.string,
-  defaultValue:PropTypes.oneOfType([ PropTypes.string,PropTypes.number ]),
-  value:PropTypes.oneOfType([ PropTypes.string,PropTypes.number ]),
+  defaultValue:PropTypes.oneOfType([PropTypes.string,PropTypes.number]),
+  value:PropTypes.oneOfType([PropTypes.string,PropTypes.number]),
   maxSize:PropTypes.number
 };

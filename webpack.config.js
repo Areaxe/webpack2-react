@@ -3,7 +3,7 @@ const path = require("path");
 const webpack = require("webpack"); //访问内置的插件
 const TransferWebpackPlugin = require("transfer-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-
+// const alia = require("/src/configs/alias");
 module.exports = {
   entry: {
     main: "./src/main.jsx",
@@ -26,7 +26,7 @@ module.exports = {
     extensions: [
       ".jsx", ".js", "scss", "css"
     ],
-    alias: {
+    alias : {
       components: path.join(__dirname, "src/components"),
       pages: path.join(__dirname, "src/pages"),
       utils: path.join(__dirname, "src/utils"),
@@ -37,17 +37,18 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: [ "style-loader", "css-loader" ]
+        use: ["style-loader", "css-loader"],
+        
       }, {
         test: /\.(js|jsx)$/,
-        include: [ path.resolve(__dirname, "src") ],
-        use: [ "babel-loader", "eslint-loader" ]
+        include: [path.resolve(__dirname, "src")],
+        use: ["babel-loader", "eslint-loader"],
       }, {
         test: /\.scss$/,
-        use: [ "style-loader", "css-loader", "sass-loader" ]
+        use: ["style-loader", "css-loader", "sass-loader"]
       }, {
         test: /\.(png|svg|jpg|gif)$/,
-        use: [ "file-loader" ]
+        use: ["file-loader"]
       }, {
         test: /\.(woff|woff2|eot|ttf|otf|mp3)$/,
         use: [
@@ -56,7 +57,7 @@ module.exports = {
           }
         ]
       }
-    ]
+    ],
   },
   plugins: [
     new TransferWebpackPlugin([

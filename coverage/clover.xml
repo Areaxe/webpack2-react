@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1514255179539" clover="3.2.0">
+  <project timestamp="1514255179540" name="All files">
+    <metrics statements="19" coveredstatements="6" conditionals="9" coveredconditionals="0" methods="7" coveredmethods="0" elements="35" coveredelements="6" complexity="0" loc="19" ncloc="19" packages="3" files="3" classes="3">
+      <package name="src.components.Button">
+        <metrics statements="8" coveredstatements="2" conditionals="7" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <file name="button.jsx" path="/home/frontend001/Desktop/work/webpack2-react/src/components/Button/button.jsx">
+          <metrics statements="8" coveredstatements="2" conditionals="7" coveredconditionals="0" methods="4" coveredmethods="0"/>
+          <line num="9" count="0" type="stmt"/>
+          <line num="13" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="21" count="0" type="cond" truecount="0" falsecount="1"/>
+          <line num="22" count="0" type="stmt"/>
+          <line num="24" count="0" type="stmt"/>
+          <line num="40" count="1" type="stmt"/>
+          <line num="47" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.utils">
+        <metrics statements="7" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <file name="classnames.js" path="/home/frontend001/Desktop/work/webpack2-react/src/utils/classnames.js">
+          <metrics statements="7" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
+          <line num="5" count="0" type="stmt"/>
+          <line num="6" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="10" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="test">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <file name="css-null-compiler.js" path="/home/frontend001/Desktop/work/webpack2-react/test/css-null-compiler.js">
+          <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>

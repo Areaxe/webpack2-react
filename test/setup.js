@@ -1,7 +1,7 @@
-// import jsdom from "jsdom";
+// import { configure } from "enzyme";
+// import Adapter from "enzyme-adapter-react-16";
 
-// if (typeof document === "undefined") {
-//   global.document = jsdom.jsdom("<!doctype html><html><body></body></html>");
-//   global.window = document.defaultView;
-//   global.navigator = global.window.navigator;
-// }
+// configure({ adapter: new Adapter() });
+
+const testsContext = require.context(".", true, /test$/);
+testsContext.keys().forEach(testsContext);

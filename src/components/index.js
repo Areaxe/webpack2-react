@@ -6,6 +6,7 @@ import IconFont from "./IconFont/iconFont";
 import Input from "./Input/input";
 import Loading from "./Loading/loading";
 import Message from "./Messages/message";
+import Directories from "./Directories/documents";
 
 export {
 	AnimateList,
@@ -15,4 +16,5 @@ export {
 	Input,
 	Loading,
 	Message,
+	Directories
 };

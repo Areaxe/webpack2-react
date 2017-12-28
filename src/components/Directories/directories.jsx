@@ -3,7 +3,6 @@ import React, {Component} from "react";
 import {Link} from "react-router";
 import classnames from "utils/classnames.js";
 import ReactDOM from "react-dom";
-import "./directories.scss";
 import data from "./data.js";
 
 export default class Directories extends Component {
@@ -12,6 +11,11 @@ export default class Directories extends Component {
     this.state = {};
     this.toggleNode = this.toggleNode.bind(this);
     this.selectedDoc = this.selectedDoc.bind(this);
+    this.indent = "15";
+  }
+
+  compomentDidMount(){
+    
   }
 
   toggleNode(nodeId, event) { //  展开闭合目录效果
@@ -32,7 +36,7 @@ export default class Directories extends Component {
           let isDirectiore = item.contentHtml ? false : true;
           let hasChild = item.children && item.children.length;
           const style = {
-            paddingLeft: floor * 10 + "px"
+            paddingLeft: floor * this.indent + "px"
           };
           return <li className="directories-item" key={item.id} ref={item.id}>
             {
@@ -60,12 +64,11 @@ export default class Directories extends Component {
   }
 
   render() {
-    const {directorie, selected} = this.props;
+    const {directorie, selected, indent } = this.props;
     const selectedId = this.state.selectedId || selected;
     return <ul>
       <li>
-        {this.renderChildren([ directorie ], selectedId, directorie.id, true, 0)
-}
+        {this.renderChildren([directorie], selectedId, directorie.id, true, 0)}
       </li>
     </ul>;
   }

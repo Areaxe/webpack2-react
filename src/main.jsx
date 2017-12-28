@@ -23,7 +23,7 @@ ReactDOM.render((
 
 import React from "react";
 import ReactDOM from "react-dom";
-import { Router, Route, IndexRoute, browserHistory,hashHistory } from "react-router";
+import { Router, Route, IndexRoute, browserHistory, hashHistory } from "react-router";
 import Home from "./pages/Index/index";
 import UserInfo from "./pages/UserInfo/UserInfo";
 import Template from "./pages/Template.jsx";

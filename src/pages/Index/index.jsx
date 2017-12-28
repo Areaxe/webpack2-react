@@ -3,7 +3,7 @@ import {Link} from "react-router";
 import "./index.scss";
 import "react-dates/initialize";
 import "react-dates/lib/css/_datepicker.css";
-import { Button, Input, AnimateList,IconFont } from "components/index";
+import { Button, Input, AnimateList,IconFont, Directories } from "components/index";
 import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from "react-dates";
 
 export default class Index extends Component{
@@ -18,10 +18,7 @@ export default class Index extends Component{
 
 	render(){
 		return <div className="index-page">
-			<IconFont name="user-o" />
-			<AnimateList />
-			<Link to={"userinfo"}>userinfo</Link>
-			<Button name="warning">Test Button</Button>
+			<Directories />
 		</div>;
 	}
 }

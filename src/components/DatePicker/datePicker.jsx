@@ -8,7 +8,7 @@ export default class DatePicker extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      monthDNum: [ 0,31,28,31,30,31,30,31,31,30,31,30,31 ],
+      monthDNum: [0,31,28,31,30,31,30,31,31,30,31,30,31],
       showCalen: false,
       year:"",    //当前的年月日
       month:"",
@@ -124,8 +124,8 @@ export default class DatePicker extends Component {
     let {showCalen,year,month,day,monthDNum,selectedDay,showYearSelect,showMonthSelect} = this.state;
     let {disabled,placement} = this.props;
     let {syear,smonth,sday} = selectedDay;
-    let MonthText = [ "一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月" ];
-    let weekList = [ "日","一","二","三","四","五","六" ];
+    let MonthText = ["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"];
+    let weekList = ["日","一","二","三","四","五","六"];
     let start = new Date(year,month - 1,1).getDay();
     let dayNum = (this.isLeapYear(year) && month == 2) ? monthDNum[month] + 1 : monthDNum[month];
     let className = classnames("date-picker",{
